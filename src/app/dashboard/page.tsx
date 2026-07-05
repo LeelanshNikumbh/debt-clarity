@@ -5,7 +5,7 @@ import AddDebtForm from '@/components/AddDebtForm';
 
 export default function Dashboard() {
   const router = useRouter();
-  const [debts, setDebts] = useState([]);
+  const [debts, setDebts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
 
