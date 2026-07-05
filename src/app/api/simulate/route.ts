@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const parsed = simulateSchema.safeParse(body);
     if (!parsed.success) {
-      return NextResponse.json({ error: 'Invalid input', details: parsed.error.errors }, { status: 400 });
+      return NextResponse.json({ error: 'Invalid input', details: parsed.error.issues }, { status: 400 });
     }
 
     const { budget, strategy, extra_lump_sum, lump_sum_target_id } = parsed.data;

@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const parsed = createDebtSchema.safeParse(body);
     if (!parsed.success) {
-      return NextResponse.json({ error: 'Invalid input', details: parsed.error.errors }, { status: 400 });
+      return NextResponse.json({ error: 'Invalid input', details: parsed.error.issues }, { status: 400 });
     }
 
     const debt = await db.debt.create({
