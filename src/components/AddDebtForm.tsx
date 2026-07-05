@@ -71,7 +71,7 @@ export default function AddDebtForm({ onClose, onSuccess }: { onClose: () => voi
               <select className="w-full border border-gray-300 p-2.5 rounded-md focus:ring-2 focus:ring-blue-500 outline-none bg-white" value={formData.type} onChange={e => setFormData({...formData, type: e.target.value})}>
                 <option value="credit_card">Credit Card</option>
                 <option value="personal_loan">Personal Loan</option>
-                <option value="student_loan">Student Loan</option>
+                <option value="bnpl">Buy Now Pay Later</option>
                 <option value="other">Other</option>
               </select>
             </div>
